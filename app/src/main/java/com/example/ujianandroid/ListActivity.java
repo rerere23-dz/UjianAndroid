@@ -17,7 +17,7 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        ListView lvNama = (ListView) findViewById(R.id.lvNama);
+        ListView listNama = (ListView) findViewById(R.id.lvNama);
 
         ArrayList<String> daftar_nama = getIntent().getExtras().getStringArrayList("daftar_nama");
 
@@ -27,7 +27,7 @@ public class ListActivity extends AppCompatActivity {
 
         ArrayAdapter<String> ad_nama = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, daftar_nama);
 
-        lvNama.setAdapter(ad_nama);
+        listNama.setAdapter(ad_nama);
 
     }
 }
